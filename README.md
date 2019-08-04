@@ -40,26 +40,18 @@
 
 ## symbol-iterator-x
 
-Boilerplate for standard modules.
+The system Symbol.iterator (real or fake)
 
-<a name="exp_module_symbol-iterator-x--module.exports"></a>
+Possible values are.
 
-### `module.exports` ⇒ <code>\*</code> ⏏
-
-This method is just a placeholder.
-
-**Kind**: Exported member  
-**Returns**: <code>\*</code> - The target.  
-**Throws**:
-
-- <code>Error</code> If target is not undefined.
-
-| Param    | Type            | Description |
-| -------- | --------------- | ----------- |
-| [target] | <code>\*</code> | The target. |
+- Symbol.iterator (real)
+- '\_es6-shim iterator\_' (fake)
+- '@@iterator' (fake)
 
 **Example**
 
 ```js
-import placeHolder from 'symbol-iterator-x';
+import $iterator$ from 'symbol-iterator-x';
+
+typeof [][$iterator$] === 'function';
 ```

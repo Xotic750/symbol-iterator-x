@@ -51,7 +51,7 @@ Possible values are.
 **Example**
 
 ```js
-import $iterator$, {getSymbolIterator(iterable)} from 'symbol-iterator-x';
+import $iterator$, {getSymbolIterator} from 'symbol-iterator-x';
 
 const array = [];
 

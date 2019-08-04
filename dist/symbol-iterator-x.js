@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-04T19:54:29.616Z",
+  "date": "2019-08-04T20:11:06.119Z",
   "describe": "",
   "description": "The system Symbol.iterator (real or fake)",
   "file": "symbol-iterator-x.js",
   "hash": "7457b38c76f2b1b49da1",
   "license": "MIT",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {

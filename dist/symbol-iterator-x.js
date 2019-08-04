@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-04T19:31:56.390Z",
+  "date": "2019-08-04T19:54:29.616Z",
   "describe": "",
   "description": "The system Symbol.iterator (real or fake)",
   "file": "symbol-iterator-x.js",
-  "hash": "a94d428d4b2425b4a5eb",
+  "hash": "7457b38c76f2b1b49da1",
   "license": "MIT",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -328,8 +328,25 @@ var hasSymbolSupport = attempt_x_esm(function () {
 /* harmony default export */ var has_symbol_support_x_esm = (hasSymbolSupport.threw === false && hasSymbolSupport.value === true);
 
 
+// CONCATENATED MODULE: ./node_modules/is-nil-x/dist/is-nil-x.esm.js
+/**
+ * Checks if `value` is `null` or `undefined`.
+ *
+ * @param {*} [value] - The value to check.
+ * @returns {boolean} Returns `true` if `value` is nullish, else `false`.
+ */
+var isNil = function isNil(value) {
+  /* eslint-disable-next-line lodash/prefer-is-nil */
+  return value === null || typeof value === 'undefined';
+};
+
+/* harmony default export */ var is_nil_x_esm = (isNil);
+
+
 // CONCATENATED MODULE: ./dist/symbol-iterator-x.esm.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSymbolIterator", function() { return symbol_iterator_x_esm_getSymbolIterator; });
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 
 
 var ES6_SHIM_ITERATOR = '_es6-shim iterator_';
@@ -384,6 +401,31 @@ var getSymIt = function getSymIt() {
 
 
 var $iterator$ = getSymIt();
+/**
+ * Detect an iterator function.
+ *
+ * @private
+ * @param {*} iterable - Value to detect iterator function.
+ * @returns {symbol|string|undefined} The iterator property identifier.
+ */
+
+var symbol_iterator_x_esm_getSymbolIterator = function getSymbolIterator(iterable) {
+  if (is_nil_x_esm(iterable) === false) {
+    if (hasSymbolIterator && iterable[$iterator$]) {
+      return $iterator$;
+    }
+
+    var result = getOtherSymbolIterator(iterable);
+
+    if (typeof result === 'string') {
+      return result;
+    }
+  }
+  /* eslint-disable-next-line no-void */
+
+
+  return void 0;
+};
 /* harmony default export */ var symbol_iterator_x_esm = __webpack_exports__["default"] = ($iterator$);
 
 

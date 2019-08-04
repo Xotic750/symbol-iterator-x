@@ -51,7 +51,13 @@ Possible values are.
 **Example**
 
 ```js
-import $iterator$ from 'symbol-iterator-x';
+import $iterator$, {getSymbolIterator(iterable)} from 'symbol-iterator-x';
 
-typeof [][$iterator$] === 'function';
+const array = [];
+
+typeof array[$iterator$] === 'function'; // true
+getSymbolIterator(array) === $iterator$; // true
+getSymbolIterator() === undefined; // true
+getSymbolIterator(null) === undefined; // true
+getSymbolIterator(1) === undefined; // true
 ```

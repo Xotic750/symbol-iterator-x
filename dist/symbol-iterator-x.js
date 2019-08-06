@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2019-present",
-  "date": "2019-08-06T00:21:41.981Z",
+  "date": "2019-08-06T18:57:13.008Z",
   "describe": "",
   "description": "The system Symbol.iterator (real or fake)",
   "file": "symbol-iterator-x.js",
